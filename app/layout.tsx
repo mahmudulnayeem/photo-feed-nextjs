@@ -1,3 +1,4 @@
+import NavBar from "@/components/nav-bar";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -28,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <NavBar />
+        <div className="container my-4 lg:my-8">{children}</div>
+        <div id="modal-root-content" />
       </body>
     </html>
   );
