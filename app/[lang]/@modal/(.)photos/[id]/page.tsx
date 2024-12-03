@@ -2,11 +2,8 @@ import Modal from "@/components/modal";
 import PhotoDetailsComponent from "@/components/photo-details";
 import { Locale } from "@/i18n.config";
 
-const PhotoDetails = async ({
-  params,
-}: {
-  params: { id: string; lang: Locale };
-}) => {
+type Params = Promise<{ lang: Locale; id: string }>;
+const PhotoDetails = async ({ params }: { params: Params }) => {
   const lang = (await params).lang;
   const id = (await params).id;
   return (
