@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useTransitionRouter } from "next-view-transitions";
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Modal = ({ children }: { children: React.ReactNode }) => {
   const modalRef = useRef<HTMLDialogElement>(null);
-  const router = useRouter();
+  const router = useTransitionRouter();
 
   useEffect(() => {
     if (!modalRef.current?.open) {

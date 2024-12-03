@@ -1,6 +1,6 @@
 import { type Photos } from "@/lib/image-data";
+import { Link } from "next-view-transitions";
 import Image from "next/image";
-import Link from "next/link";
 
 const PhotoCard = ({ photo }: { photo: Photos }) => {
   return (
